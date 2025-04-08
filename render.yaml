@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: lk3buy-api
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python etf_buy_signal_api.py
