@@ -1,9 +1,19 @@
 # -*- coding: utf-8 -*-
-# Flask API Server
-# ?�기??etf_buy_signal_api 코드 붙여?�으?�요
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 
+app = Flask(__name__)
+CORS(app)
+
+@app.route('/')
+def index():
+    return 'LK_3_BUY API is running!'
+
+@app.route('/analyze', methods=['POST'])
+def analyze():
+    return jsonify({"message": "ETF 분석 완료", "매수신호": True})
+
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Render에서 제공하는 포트
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-    
