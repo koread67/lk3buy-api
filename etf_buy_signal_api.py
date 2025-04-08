@@ -12,7 +12,7 @@ def index():
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
-    return jsonify({"message": "ETF 분석 완료", "매수신호": True})
+    return jsonify({"message": "ETF ë¶ì ìë£", "ë§¤ìì í¸": True})
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
